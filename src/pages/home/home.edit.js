@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { todoContext } from '../../app/TodoCtx';
-import { editTodo, postTodo } from './TodoSlice';
+import { editTodo } from './TodoSlice';
 
 const FormEdit = ({ todoProps }) => {
   const [todo, setTodo] = useState('');
@@ -33,5 +34,7 @@ const FormEdit = ({ todoProps }) => {
     </form>
   );
 };
-
+FormEdit.propTypes = {
+  todoProps: PropTypes.object,
+};
 export default FormEdit;

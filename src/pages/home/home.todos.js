@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useDispatch } from 'react-redux';
 import { todoContext } from '../../app/TodoCtx';
-import FormEdit from './home.edit';
+import PropTypes from 'prop-types';
 import { completeTodo, removeTodo } from './TodoSlice';
 
 const TodoItem = ({ todo }) => {
@@ -63,5 +63,7 @@ const TodoItem = ({ todo }) => {
     </>
   );
 };
-
+TodoItem.propTypes = {
+  todo: PropTypes.object,
+};
 export default TodoItem;
