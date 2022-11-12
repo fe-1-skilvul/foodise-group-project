@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useSelector } from 'react-redux';
 import { todoContext } from '../../app/TodoCtx';
 import HomeContent from './home.content';
 import './home.css';

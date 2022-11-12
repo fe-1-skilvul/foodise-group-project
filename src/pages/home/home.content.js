@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import TodoItem from './home.todos';
-import { completeTodo, removeTodo } from './TodoSlice';
 
 const HomeContent = () => {
   const todos = useSelector((state) => state.todolist);
@@ -25,7 +24,7 @@ const HomeContent = () => {
           return (
             <button
               key={i}
-              style={display == value ? styledActive : null}
+              style={display === value ? styledActive : null}
               type="button"
               onClick={(e) => handleDisplayTodo(e)}
               value={value}>
