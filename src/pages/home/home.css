@@ -1,0 +1,114 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 500px;
+    height: 100vh;
+    border: solid 1px #000;
+}
+.box h1{
+    width: 100%;
+    text-align: center;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+form input{
+    width: 300px;
+    height: 40px;
+    border: #bfbfbf solid 1px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 2px;
+    
+}
+form button{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+}
+button.add{
+    background: #1555f6;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+button.edit{
+    background: #d7c205;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #000;
+}
+.buttons-display{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.buttons-display button{
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    color: #069bf2;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 2px;
+    border: solid rgb(6, 155, 242) 1px;
+    cursor: pointer;
+}
+.todo-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+   
+}
+.todo-item p{
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border: solid 1px #bfbfbf;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+.todo-item button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.todo-item button.cek:hover{
+    background: #069bf2;
+}
+.todo-item button.change:hover{
+    background: #d7c205;
+}
+.todo-item button.delete:hover{
+    background: #f23838;
+}
+@media screen and (max-width: 480px) {
+    .todo-item p{
+        width: 200px;
+    }
+  }
