@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {Button} from 'react-bootstrap';
+import Layout from '../components/layout/Layout';
+
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Layout>
+        <h1>Home</h1>
+    </Layout>
   )
 }
 
