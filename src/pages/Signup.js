@@ -1,14 +1,16 @@
 import React from 'react';
 import { Col, Row, Stack } from 'react-bootstrap';
 import { TypoTitle, TypoSubTitle } from '../components/atoms';
+import FormSignup from '../components/forms/FormSignup';
 
 const Signup = () => {
   return (
     <Row
+      className="justify-content-md-center"
       style={{
         marginTop: '100px',
       }}>
-      <Col>
+      <Col xs={12} md={7}>
         <Stack gap={5}>
           <div>
             <TypoTitle content="Join Foodise" />
@@ -27,7 +29,9 @@ const Signup = () => {
           </div>
         </Stack>
       </Col>
-      <Col>2 of 2</Col>
+      <Col xs={12} md={5}>
+        <FormSignup />
+      </Col>
     </Row>
   );
 };
