@@ -13,7 +13,9 @@ const Login = () => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Sign in</Modal.Title>
+        <Modal.Title>
+          Sign <span className="color-prim">in</span>{' '}
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <FormLogin />
