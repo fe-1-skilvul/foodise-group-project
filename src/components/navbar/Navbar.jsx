@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Button,
   Container,
@@ -7,10 +7,12 @@ import {
   Navbar,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { loginCtx } from '../../context/LoginCtx';
 import Icon from '../atoms/Icon';
 import './Navbar.css';
 
 const Appbar = () => {
+  const { setShow } = useContext(loginCtx);
   return (
     <Navbar
       style={{
@@ -62,12 +64,8 @@ const Appbar = () => {
               <Dropdown.Item active>Foods</Dropdown.Item>
               <Dropdown.Item>Favourite</Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item>
-                <Link
-                  to={'/signup'}
-                  className="text-decoration-none text-success ">
-                  Log in{' '}
-                </Link>
+              <Dropdown.Item onClick={(e) => setShow(true)}>
+                Log in
               </Dropdown.Item>
               <Dropdown.Item>
                 <Link

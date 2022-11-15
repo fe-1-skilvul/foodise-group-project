@@ -1,16 +1,9 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 
-const FormSignup = () => {
+const FormLogin = () => {
   return (
-    <Form
-      style={{
-        marginTop: '100px',
-      }}>
-      <Form.Group className="mb-3">
-        <Form.Label className="label-text">Username</Form.Label>
-        <Form.Control type="text" placeholder="Enter Username" />
-      </Form.Group>
+    <Form>
       <Form.Group className="mb-3">
         <Form.Label className="label-text">Email</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -19,20 +12,14 @@ const FormSignup = () => {
         <Form.Label className="label-text">Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Label className="label-text">
-          Confirm Password
-        </Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
       <Button
         type="button"
         size="lg"
         className="w-100 button button-main">
-        Sign up
+        Login
       </Button>
     </Form>
   );
 };
 
-export default FormSignup;
+export default FormLogin;
