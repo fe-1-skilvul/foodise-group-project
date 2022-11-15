@@ -7,6 +7,7 @@ import {
   Navbar,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Icon from '../atoms/Icon';
 import './Navbar.css';
 
 const Appbar = () => {
@@ -40,31 +41,21 @@ const Appbar = () => {
               border: 'none',
             }}
             className="rounded-pill">
-            <img src="/icons/search-solid.svg" alt="" />
+            <Icon image="/icons/search-solid.svg" alt="search" />
           </Button>
         </Form>
         <div className="container-nav">
           <div className="box-nav d-none d-md-flex">
-            <img
-              src="/icons/bowl-food-solid.svg"
-              alt=""
-              width={20}
-              height={24}
-            />
-            <img
-              src="/icons/bell-solid.svg"
-              alt=""
-              width={20}
-              height={24}
-            />
+            <Icon image="/icons/bowl-food-solid.svg" alt="favorite" />
+            <Icon image="/icons/bell-solid.svg" alt="notif" />
           </div>
           <Dropdown>
             <Dropdown.Toggle
               id="dropdown-button-dark-example1"
               variant="light"
               className="rounded-pill border border-gray text-success avatar-menu">
-              <img src="/icons/user-solid.svg" alt="" />
-              <img src="/icons/bars-solid.svg" alt="" />
+              <Icon image="/icons/user-solid.svg" alt="avatar" />
+              <Icon image="/icons/bars-solid.svg" alt="menu" />
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

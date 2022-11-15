@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-const ButtonLogin = () => {
+const ButtonLogin = ({ click, name }) => {
   return (
-    <button type="button" class="btn btn-success">Login</button>
-  )
-}
+    <Button
+      type="button"
+      className="w-100 btn-primary"
+      onClick={click}>
+      {name}
+    </Button>
+  );
+};
 
-export default ButtonLogin
+export default ButtonLogin;
