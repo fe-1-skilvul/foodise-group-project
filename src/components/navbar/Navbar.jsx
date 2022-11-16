@@ -9,6 +9,7 @@ import {
 import { Link } from 'react-router-dom';
 import { loginCtx } from '../../context/LoginCtx';
 import Icon from '../atoms/Icon';
+import Search from '../search/Search';
 import './Navbar.css';
 
 const Appbar = () => {
@@ -30,22 +31,10 @@ const Appbar = () => {
             />
           </Link>
         </Navbar.Brand>
-        <Form className="d-none d-md-flex rounded-pill">
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2 rounded-pill"
-            aria-label="Search"
-          />
-          <Button
-            style={{
-              backgroundColor: '#3BACB6',
-              border: 'none',
-            }}
-            className="rounded-pill">
-            <Icon image="/icons/search-solid.svg" alt="search" />
-          </Button>
-        </Form>
+        <div className="d-none d-md-flex">
+          <Search />
+        </div>
+
         <div className="container-nav">
           <div className="box-nav d-none d-md-flex">
             <Icon image="/icons/bowl-food-solid.svg" alt="favorite" />

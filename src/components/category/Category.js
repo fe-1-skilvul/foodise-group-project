@@ -1,0 +1,18 @@
+import { Stack } from 'react-bootstrap';
+import Icon from '../atoms/Icon';
+import CategoryItem from './CategoryItem';
+import { categories } from '../../Services/category';
+
+const Category = () => {
+  return (
+    <Stack className="d-none d-md-flex flex-row gap-3 align-items-center justify-content-evenly ">
+      {categories.map((item, i) => {
+        return (
+          <CategoryItem key={i} icon={item.icon} name={item.name} />
+        );
+      })}
+    </Stack>
+  );
+};
+
+export default Category;

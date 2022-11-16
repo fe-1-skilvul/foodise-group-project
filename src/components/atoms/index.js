@@ -1,4 +1,4 @@
 import './style.css';
-import { TypoTitle, TypoSubTitle } from './Typography';
+import { TypoTitle, TypoSubTitle, TypoMain } from './Typography';
 
-export { TypoTitle, TypoSubTitle };
+export { TypoTitle, TypoSubTitle, TypoMain };

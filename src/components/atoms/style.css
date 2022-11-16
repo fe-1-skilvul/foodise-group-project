@@ -11,3 +11,18 @@
   line-height: 24px;
   color: #9e9e9e;
 }
+.typo-main {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+.typo-main span {
+  color: #3bacb6;
+  margin-left: 5px;
+}

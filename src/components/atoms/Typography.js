@@ -6,5 +6,11 @@ const TypoTitle = ({ content }) => {
 const TypoSubTitle = ({ content }) => {
   return <p className="typo-sub">{content}</p>;
 };
-
-export { TypoTitle, TypoSubTitle };
+const TypoMain = ({ text, coloredText }) => {
+  return (
+    <p className="typo-main">
+      {text} <span> {coloredText}</span>{' '}
+    </p>
+  );
+};
+export { TypoTitle, TypoSubTitle, TypoMain };
