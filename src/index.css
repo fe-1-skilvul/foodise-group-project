@@ -91,3 +91,9 @@ code {
 .color-gray {
   color: #9e9e9e;
 }
+.text-link {
+  color: #083236;
+}
+.text-link:hover {
+  color: #108590;
+}

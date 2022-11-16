@@ -8,7 +8,9 @@ const CategoryItem = (props) => {
       className="d-flex align-items-center flex-column"
       style={{
         width: '100px',
-      }}>
+        cursor: 'pointer',
+      }}
+      onClick={(e) => console.log(name)}>
       <Icon image={`${icon}`} alt="spoon" />
       <p className="text-item">{name}</p>
     </div>
