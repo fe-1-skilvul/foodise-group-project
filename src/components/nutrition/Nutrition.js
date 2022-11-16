@@ -3,7 +3,7 @@ import React from 'react';
 const Nutrition = ({ icon, name, value }) => {
   return (
     <div className="shadow-sm d-flex flex-row justify-content-between align-items-center p-3">
-      <div className="d-flex flex-row align-items-center gap-5">
+      <div className="d-flex flex-row align-items-center gap-3">
         <img src={icon} alt={name} />
         <p
           style={{

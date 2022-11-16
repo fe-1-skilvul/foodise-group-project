@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Stack } from 'react-bootstrap';
+import { Button, Col, Row, Stack } from 'react-bootstrap';
 import { TypoMain } from '../components/atoms';
 import Nutrition from '../components/nutrition/Nutrition';
 
@@ -37,8 +37,8 @@ const Detail = () => {
             <div dangerouslySetInnerHTML={{ __html: desc }}></div>
           </div>
         </Stack>
-        <Stack className="d-flex flex-row flex-wrap p-5">
-          <Stack className="p-2 gap-4">
+        <Stack className="d-flex flex-row flex-wrap align-items-center p-5 gap-5">
+          <Stack className=" gap-4">
             <Nutrition
               icon={'/icons/fire-cal.svg'}
               name={'Kalori'}
@@ -60,7 +60,14 @@ const Detail = () => {
               value={'23g'}
             />
           </Stack>
-          <Stack></Stack>
+          <Stack className="d-flex justify-content-center align-items-center">
+            <div className="carbon-card">
+              <div className="carbon-circle">
+                <div className="box-carbon">200c02</div>
+              </div>
+              <Button className="button button-main">Save</Button>
+            </div>
+          </Stack>
         </Stack>
       </Col>
     </Row>
