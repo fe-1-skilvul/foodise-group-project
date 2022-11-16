@@ -1,0 +1,21 @@
+.hero{
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    
+
+}
+.hero-img{
+    width: 700px;
+}
+.cardHero{
+    margin-right: -100px;
+    height: 300px;
+    width: 350px;
+    /* margin-top: 30px; */
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: 1px;
+    border-width: 2px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
