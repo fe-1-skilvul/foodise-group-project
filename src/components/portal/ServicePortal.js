@@ -1,5 +1,6 @@
 import { Button, Stack } from 'react-bootstrap';
 import { TypoMain } from '../atoms';
+import CategoryBar from '../category/CategoryBar';
 
 const ServicePortal = () => {
   return (
@@ -8,6 +9,7 @@ const ServicePortal = () => {
       <Button className="button button-outlined d-none d-md-block">
         MyFoods
       </Button>
+      <CategoryBar />
     </Stack>
   );
 };
