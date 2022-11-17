@@ -9,7 +9,7 @@ import { loginCtx } from '../../context/LoginCtx';
 const FormSignup = () => {
   const [dataSignup, setDataSignup] = useState({});
   const { setShow } = useContext(loginCtx);
-  const navigate = useNavigate();
+
   const getDataSignup = (e) => {
     let value = e.target.value;
     let name = e.target.name;
