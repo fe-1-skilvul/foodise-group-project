@@ -22,7 +22,7 @@ const Appbar = () => {
       expand="lg">
       <Container>
         <Navbar.Brand>
-          <Link to={'/'}>
+          <Link to={'/home'}>
             <img
               src="/images/foodise-logo.png"
               alt=""
