@@ -11,7 +11,7 @@ const CardFood = ({ name, img, id, protein }) => {
           to={'/foods/675s8900uwhwio00s'}
           className="text-decoration-none">
           <p className="text-danger fs-6 fw-bold">
-            Protein: <span> {protein} </span> g
+            Protein: {protein} g
           </p>
           <Card.Title
             onClick={(e) => console.log(id)}

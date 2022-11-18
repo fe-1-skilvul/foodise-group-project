@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Stack } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import { filterCtx } from '../../context/FilterCtx';
 import { fetchFoods } from '../../features/FetchAPI/dataSlice';
 import { fakeData } from '../../Services/db';
 import CardFood from '../card/CardFood';
 
 const ListFoods = () => {
+  const data = fakeData;
+  // const { query, category } = useContext(filterCtx);
   // const foods = useSelector((state) => state.foods);
   // const dispatch = useDispatch();
-  const data = fakeData;
+
   // useEffect(() => {
-  //   dispatch(fetchFoods());
-  // }, []);
+  //   dispatch(fetchFoods({ query, category }));
+  // }, [query]);
   // console.log(foods);
   return (
     <Stack
