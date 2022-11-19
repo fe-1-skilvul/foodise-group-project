@@ -16,7 +16,7 @@ const btnLanding=[
 
 const CardFeature=[
     {
-        logo:"/icons/food-1.svg",
+        logo:"/icons/food.svg",
         title:"Food Nutrition",
         desc:"Dapatkan Informasi Nutrisi Makanan",
     },{

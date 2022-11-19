@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div>
         <div className='hero mb-5'>
-          <div className='cardHero card'>
+          <div className='cardHero card border-0'>
             <h1>Your Food</h1>
             <h1>Your choice</h1>
             <p> Kami berdedikasi untuk membantu kamu dalam memilih makanan terbaik dengan dampak positif terbaik</p>
