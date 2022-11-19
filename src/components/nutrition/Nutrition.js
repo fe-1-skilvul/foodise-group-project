@@ -20,7 +20,7 @@ const Nutrition = ({ icon, name, value }) => {
         style={{
           margin: 0,
           fontWeight: '600',
-          fontSize: '24px',
+          fontSize: '18px',
           lineHeight: '30px',
           color: '#9e9e9e',
         }}>

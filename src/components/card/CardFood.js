@@ -7,17 +7,11 @@ const CardFood = ({ name, img, id, protein }) => {
     <Card style={{ width: '18rem', border: 'none' }}>
       <Card.Img className="rounded" variant="top" src={img} />
       <Card.Body>
-        <Link
-          to={'/foods/675s8900uwhwio00s'}
-          className="text-decoration-none">
-          <p className="text-danger fs-6 fw-bold">
-            Protein: {protein} g
-          </p>
-          <Card.Title
-            onClick={(e) => console.log(id)}
-            className="text-link">
-            {name}
-          </Card.Title>
+        <p className="text-danger fs-6 fw-bold">
+          Protein: {protein} g
+        </p>
+        <Link to={`/food/${id}`} className="text-decoration-none">
+          <Card.Title className="text-link">{name}</Card.Title>
         </Link>
       </Card.Body>
     </Card>

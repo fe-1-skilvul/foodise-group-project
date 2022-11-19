@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 
 const initialState = {
   query: '',
-  category: '',
+  category: 'main course',
 };
 
 export const filterCtx = createContext(initialState);
