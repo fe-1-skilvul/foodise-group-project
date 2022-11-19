@@ -23,9 +23,9 @@ const FormSignup = () => {
       return setDataSignup((prev) => ({ ...prev, email: value }));
     }
   };
-  const handleRegister = () => {
-    const res = register({ dataSignup, id: nanoid() });
-
+  const handleRegister = (e) => {
+    const res = register({ ...dataSignup, id: nanoid() });
+    e.preventDefault();
     if (res.response === true) {
       alert('register success');
       setShow(true);
@@ -35,7 +35,8 @@ const FormSignup = () => {
     <Form
       style={{
         marginTop: '100px',
-      }}>
+      }}
+      onSubmit={(e) => handleRegister(e)}>
       <Form.Group className="mb-3">
         <Form.Label className="label-text">Username</Form.Label>
         <Form.Control
@@ -64,8 +65,7 @@ const FormSignup = () => {
         />
       </Form.Group>
       <Button
-        type="button"
-        onClick={() => handleRegister()}
+        type="submit"
         size="lg"
         className="w-100 button button-main">
         Sign up
