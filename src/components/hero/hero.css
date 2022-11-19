@@ -2,20 +2,18 @@
     display: flex;  
     justify-content: center;
     align-items: center; 
-    
+    margin: 2rem 0 ;
 
 }
 .hero-img{
-    width: 700px;
+    width: 800px;
 }
 .cardHero{
-    margin-right: -100px;
+    margin-right: -200px;
     height: 300px;
     width: 350px;
     /* margin-top: 30px; */
     padding: 2rem 2rem 2rem 2rem;
-    box-shadow: 1px;
-    border-width: 2px;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
 }

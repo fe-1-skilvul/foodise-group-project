@@ -20,7 +20,7 @@ function LandingPage() {
           <div>
             <CardFoods />
           </div>
-          <Button variant="outline-primary" className='d-flex mx-auto my-5 px-4 button-'>More Foods <img className='ms-3 center' src="/icons/right.svg" alt="" width={"9px"}/></Button>{''}
+          <Button variant="outline-primary" className='d-flex mx-auto my-5 px-4 justify-content-center'>More Foods</Button>
         </div>
     </div>
   )
