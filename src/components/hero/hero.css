@@ -2,11 +2,11 @@
     display: flex;  
     justify-content: center;
     align-items: center; 
-    
+    margin: 2rem 0 ;
 
 }
 .hero-img{
-    width: 700px;
+    width: 800px;
 }
 .cardHero{
     margin-right: -200px;
