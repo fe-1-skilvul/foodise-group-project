@@ -3,14 +3,11 @@ import { Stack } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterCtx } from '../../context/FilterCtx';
 import { fetchFoods } from '../../features/FetchAPI/dataSlice';
-import Detail from '../../pages/Detail';
-import { fakeData } from '../../Services/db';
 import Loading from '../atoms/loading';
 import CardFood from '../card/CardFood';
 import Notfound from '../notfound/Notfound';
 
 const ListFoods = () => {
-  const data = fakeData;
   const { query, category } = useContext(filterCtx);
   const list = useSelector((state) => state.list);
   const dispatch = useDispatch();

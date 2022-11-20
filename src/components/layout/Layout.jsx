@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Login from '../../pages/Login';
 import Footer from '../footer/Footer';
 import Appbar from '../navbar/Navbar';

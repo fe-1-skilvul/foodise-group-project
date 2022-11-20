@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-
 import { nanoid } from '@reduxjs/toolkit';
 import { register } from '../../Services/auth';
 import { loginCtx } from '../../context/LoginCtx';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import { categories } from '../../Services/category';
 import Icon from '../atoms/Icon';
 

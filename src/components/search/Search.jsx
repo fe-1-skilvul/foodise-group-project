@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
 import { filterCtx } from '../../context/FilterCtx';
-import { fetchFoods } from '../../features/FetchAPI/dataSlice';
+
 import Icon from '../atoms/Icon';
 
 const Search = () => {
-  const { query, setQuery, category } = useContext(filterCtx);
+  const { setQuery } = useContext(filterCtx);
   const [search, setSearch] = useState('');
 
   const handleSearch = (e) => {

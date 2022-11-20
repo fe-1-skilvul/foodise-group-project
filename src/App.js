@@ -15,7 +15,6 @@ import Signup from './pages/Signup';
 
 function App() {
   const { isLogin, setShow } = useContext(loginCtx);
-  const loged = true;
   const RequireAuth = ({ children }) => {
     if (isLogin) {
       return <>{children}</>;

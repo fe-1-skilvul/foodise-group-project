@@ -12,7 +12,7 @@ export const fetchDetail = createAsyncThunk(
   async ({ id }) => {
     return axios
       .get(
-        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_KEY1}&includeNutrition=true`
+        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_KEY2}&includeNutrition=true`
       )
       .then((res) => res.data);
   }
