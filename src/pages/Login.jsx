@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import FormLogin from '../components/forms/FormLogin';
-import FormSignup from '../components/forms/FormSignup';
 import { loginCtx } from '../context/LoginCtx';
 
 const Login = () => {

@@ -1,5 +1,4 @@
 import { Stack } from 'react-bootstrap';
-import Icon from '../atoms/Icon';
 import CategoryItem from './CategoryItem';
 import { categories } from '../../Services/category';
 

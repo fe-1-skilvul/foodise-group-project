@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Category from '../components/category/Category';
-import Layout from '../components/layout/Layout';
 import ListFoods from '../components/list/ListFoods';
 import ServicePortal from '../components/portal/ServicePortal';
 import { loginCtx } from '../context/LoginCtx';

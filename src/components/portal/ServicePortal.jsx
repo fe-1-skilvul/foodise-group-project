@@ -1,7 +1,5 @@
-import { useContext } from 'react';
 import { Button, Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { loginCtx } from '../../context/LoginCtx';
 import { TypoMain } from '../atoms';
 import CategoryBar from '../category/CategoryBar';
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import Hero from '../components/hero/Hero';
 import CardFeatures from '../components/card/CardFeatures';
-import CardFoods from '../components/card/CardFoods';
-import Button from 'react-bootstrap/Button';
 
 function LandingPage() {
   return (
