@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +10,126 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.label-text {
+  color: #007a85;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+.color-prim {
+  color: #007a85;
+}
+.button {
+  width: 200px;
+  height: 42px;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+.button-main {
+  color: #fff;
+  background: #3bacb6;
+}
+.button-main:hover {
+  background: #227880;
+}
+.button-outlined {
+  background: #fff;
+  color: #16595f;
+  border: 2px solid #16595fab;
+}
+.button-outlined:hover {
+  color: #fff;
+  background: #227880;
+}
+.color-primary {
+  color: #108590;
+}
+.button-form {
+  width: 100%;
+  border: none;
+  height: 36px;
+  transition: 0.5s;
+  border-radius: 6px;
+}
+.button-third {
+  color: #fff;
+  background: #e05323;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.button-third:hover {
+  background: #c63e10;
+}
+.alert-null {
+  height: 100vh;
+  align-items: center;
+}
+.portal {
+  min-height: 300px;
+}
+.box-item {
+  width: 150px;
+}
+.text-item {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #9e9e9e;
+}
+.color-red {
+  color: #f50c0c;
+}
+.color-gray {
+  color: #9e9e9e;
+}
+.text-link {
+  color: #083236;
+}
+.text-link:hover {
+  color: #108590;
+}
+.carbon-card {
+  width: 365px;
+  height: 425px;
+  border-radius: 12px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  padding: 33px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carbon-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid #16595f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-carbon {
+  background: #ced6db;
+  width: 150px;
+  height: 150px;
+  color: #083236;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
