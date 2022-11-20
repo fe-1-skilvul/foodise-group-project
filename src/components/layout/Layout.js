@@ -10,14 +10,17 @@ const Layout = ({ children }) => {
     <>
       <Appbar />
 
-      <Container>
+      <Container
+        style={{
+          minHeight: '100vh',
+        }}>
         <div className="d-block d-md-none">
           <Search />
         </div>
         {children}
       </Container>
       <Login />
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Alert, Button, Col, Row, Stack } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { TypoSubTitle } from '../components/atoms';
 import Loading from '../components/atoms/loading';
 import Nutrition from '../components/nutrition/Nutrition';
@@ -17,6 +17,7 @@ const Detail = () => {
   const detail = useSelector((state) => state.detail);
   const id = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   console.log(user);
   useEffect(() => {
     dispatch(fetchDetail(id));
@@ -26,7 +27,6 @@ const Detail = () => {
     const newfood = { ...fakeDetail, userid: user.id };
     let newdata = [];
     if (foods === null) {
-      console.log('null');
       newdata.push(newfood);
       postNewFood(newdata);
     }
