@@ -7,7 +7,6 @@ import ServicePortal from '../components/portal/ServicePortal';
 import { loginCtx } from '../context/LoginCtx';
 
 const Home = () => {
-  const { isLogin } = useContext(loginCtx);
   return (
     <Row className="justify-content-md-center">
       <Col className="mt-5">

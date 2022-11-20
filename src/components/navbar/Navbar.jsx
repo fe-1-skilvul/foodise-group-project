@@ -50,19 +50,17 @@ const Appbar = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item active>Foods</Dropdown.Item>
+              <Dropdown.Item>Foods</Dropdown.Item>
               <Dropdown.Item>Favourite</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item onClick={(e) => setShow(true)}>
                 Log in
               </Dropdown.Item>
-              <Dropdown.Item>
-                <Link
-                  to={'/signup'}
-                  className="text-decoration-none text-success ">
-                  Sign up{' '}
-                </Link>
-              </Dropdown.Item>
+              <Link
+                to={'/signup'}
+                className="text-decoration-none text-success ">
+                <Dropdown.Item>Sign up </Dropdown.Item>
+              </Link>
             </Dropdown.Menu>
           </Dropdown>
         </div>
