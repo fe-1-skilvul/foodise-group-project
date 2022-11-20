@@ -32,10 +32,10 @@ code {
 }
 .button-main {
   color: #fff;
-  background: #16595f;
+  background: #3bacb6;
 }
 .button-main:hover {
-  background: #083236;
+  background: #227880;
 }
 .button-outlined {
   background: #fff;
@@ -44,7 +44,7 @@ code {
 }
 .button-outlined:hover {
   color: #fff;
-  background: #083236;
+  background: #227880;
 }
 .color-primary {
   color: #108590;

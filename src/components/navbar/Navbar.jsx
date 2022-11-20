@@ -58,8 +58,12 @@ const Appbar = () => {
               </Dropdown.Item>
               <Link
                 to={'/signup'}
-                className="text-decoration-none text-success ">
-                <Dropdown.Item>Sign up </Dropdown.Item>
+                className="text-decoration-none text-success text-center "
+                style={{
+                  paddingLeft: '15px',
+                  fontWeight: 'bold',
+                }}>
+                Sign up
               </Link>
             </Dropdown.Menu>
           </Dropdown>

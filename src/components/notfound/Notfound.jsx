@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Notfound = () => {
   return (
@@ -12,11 +13,11 @@ const Notfound = () => {
           alt=""
         />
         <h4 className="mt-5 color-primary">You Dont Have Any Food</h4>
-        <a href="../home.html">
+        <Link to="/home">
           <button className="mt-5 button button-main text-decoration-none">
             Foods
           </button>
-        </a>
+        </Link>
       </div>
     </>
   );
