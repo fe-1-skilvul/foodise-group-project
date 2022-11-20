@@ -10,7 +10,6 @@ const initialState = {
 export const fetchFoods = createAsyncThunk(
   'data/fetchFoods',
   async ({ query, category }) => {
-    console.log(query, category);
     return axios
       .get(
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_KEY1}&query=${query}&number=30&type=${category}&minProtein=10`

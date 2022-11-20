@@ -7,10 +7,12 @@ import ServicePortal from '../components/portal/ServicePortal';
 import { loginCtx } from '../context/LoginCtx';
 
 const Home = () => {
+  const { user } = useContext(loginCtx);
+
   return (
     <Row className="justify-content-md-center">
       <Col className="mt-5">
-        <ServicePortal />
+        <ServicePortal user={user !== null ? user.username : ''} />
         <Category />
         <ListFoods />
       </Col>

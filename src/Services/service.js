@@ -1,7 +1,5 @@
 const postNewFood = (data) => {
   localStorage.setItem('saved', JSON.stringify(data));
-
-  console.log('berhasil');
 };
 
 const getSavedFoods = () => {

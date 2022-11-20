@@ -3,7 +3,6 @@ import { Button, Form } from 'react-bootstrap';
 
 import { nanoid } from '@reduxjs/toolkit';
 import { register } from '../../Services/auth';
-import { useNavigate } from 'react-router-dom';
 import { loginCtx } from '../../context/LoginCtx';
 
 const FormSignup = () => {
@@ -27,7 +26,6 @@ const FormSignup = () => {
     const res = register({ ...dataSignup, id: nanoid() });
     e.preventDefault();
     if (res.response === true) {
-      alert('register success');
       setShow(true);
     }
   };

@@ -22,7 +22,6 @@ const FormLogin = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const isLogin = login(dataLogin);
-    console.log(isLogin.response);
     if (!isLogin.response) {
       return setOpen(true);
     }
