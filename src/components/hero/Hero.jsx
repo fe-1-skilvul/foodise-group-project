@@ -1,32 +1,57 @@
-import React from 'react'
+import React from 'react';
+import { Stack } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import {btnLanding} from '../../config/'
-import './hero.css'
+import { btnLanding } from '../../config/';
+import './hero.css';
 
 function Hero() {
   return (
     <div>
-        <div className='hero'>
-          <div className='cardHero card border-0'>
-            <h1>Your Food</h1>
-            <h1>Your choice</h1>
-            <p> Kami berdedikasi untuk membantu kamu dalam memilih makanan terbaik dengan dampak positif terbaik</p>
-          </div>
-          <img className='hero-img' src="/images/Hero.png" alt="" />
+      <div className="hero">
+        <div className="cardHero card border-0">
+          <h2>Your Food</h2>
+          <h2>Your Choice</h2>
+          <p
+            style={{
+              fontSize: '18px',
+              color: '#9e9e9e',
+              fontWeight: '600',
+            }}>
+            {' '}
+            Save Your Health with Your Food Choice
+          </p>
         </div>
-        <div className='d-flex justify-content-around'>
+        <img className="img-fluid " src="/images/Hero.png" alt="" />
+      </div>
+      <Stack className="d-flex flex-wrap flex-md-row justify-content-around">
         {btnLanding.map((btn, index) => (
-            <Button key={`btnLanding-${index}`} variant='outline-primary' className='hero mx-1'>
-              <div  className='d-flex align-items-center '>
-                <p className='tx-primary my-auto'>{btn.text1}</p>
-                <p className='mx-2 my-auto'>{btn.text2}</p>
-                <img src={btn.icon} alt=""/>
-              </div>
-            </Button>
-                ))}
-        </div>
+          <Button
+            key={`btnLanding-${index}`}
+            variant="outline-grey"
+            className="hero mx-1">
+            <div className="d-flex align-items-center ">
+              <p
+                className="tx-grey my-auto"
+                style={{
+                  fontWeight: '600',
+                }}>
+                {btn.text1}
+              </p>
+              <p
+                className="mx-2 my-auto"
+                style={{
+                  color: '#3bacb6',
+                  fontWeight: '600',
+                }}>
+                {btn.text2}
+              </p>
+              <img src={btn.icon} alt="" />
+            </div>
+          </Button>
+        ))}
+      </Stack>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

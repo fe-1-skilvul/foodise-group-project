@@ -56,12 +56,18 @@ const Appbar = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Link to="/home" className="text-decoration-none">
-                <Dropdown.Item>Foods</Dropdown.Item>
-              </Link>
-              <Link to="/booked" className="text-decoration-none">
-                <Dropdown.Item>Favorites</Dropdown.Item>
-              </Link>
+              <Dropdown.Item>
+                <Link to="/home" className="text-decoration-none">
+                  Foods
+                </Link>
+              </Dropdown.Item>
+
+              <Dropdown.Item>
+                <Link to="/booked" className="text-decoration-none">
+                  Favorites
+                </Link>
+              </Dropdown.Item>
+
               <Dropdown.Divider />
               {isLogin ? (
                 <Dropdown.Item
