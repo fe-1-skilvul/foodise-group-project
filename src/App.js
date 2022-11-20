@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import { loginCtx } from './context/LoginCtx';
+import BookMark from './pages/BookMark';
 import Detail from './pages/Detail';
 import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
@@ -16,7 +17,7 @@ function App() {
   const { isLogin, setShow } = useContext(loginCtx);
   const loged = true;
   const RequireAuth = ({ children }) => {
-    if (loged) {
+    if (isLogin) {
       return <>{children}</>;
     }
     setShow(true);
@@ -36,19 +37,20 @@ function App() {
                 </RequireAuth>
               }
             />
-            <Route
-              path="/signup"
-              element={
-                <RequireAuth>
-                  <Signup />
-                </RequireAuth>
-              }
-            />
+            <Route path="/signup" element={<Signup />} />
             <Route
               path="/food/:id"
               element={
                 <RequireAuth>
                   <Detail />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/food/today"
+              element={
+                <RequireAuth>
+                  <BookMark />
                 </RequireAuth>
               }
             />

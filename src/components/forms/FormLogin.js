@@ -7,7 +7,7 @@ import { login } from '../../Services/auth';
 const FormLogin = () => {
   const [dataLogin, setDataLogin] = useState();
   const [open, setOpen] = useState(false);
-  const { setShow } = useContext(loginCtx);
+  const { setShow, setIsLogin } = useContext(loginCtx);
   const navigate = useNavigate();
   const getInputLogin = (e) => {
     let value = e.target.value;
@@ -19,17 +19,19 @@ const FormLogin = () => {
       return setDataLogin((prev) => ({ ...prev, email: value }));
     }
   };
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     const isLogin = login(dataLogin);
     console.log(isLogin.response);
     if (!isLogin.response) {
       return setOpen(true);
     }
+    setIsLogin(true);
     setShow(false);
     navigate('/home');
   };
   return (
-    <Form>
+    <Form onSubmit={(e) => handleLogin(e)}>
       {open ? (
         <Alert
           variant="danger"
@@ -58,9 +60,8 @@ const FormLogin = () => {
         />
       </Form.Group>
       <Button
-        type="button"
+        type="submit"
         size="lg"
-        onClick={(e) => handleLogin()}
         className="w-100 button button-main">
         Login
       </Button>
