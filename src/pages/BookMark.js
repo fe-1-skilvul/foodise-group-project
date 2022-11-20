@@ -3,6 +3,7 @@ import { Button, Col, Row, Stack } from 'react-bootstrap';
 import { TypoMain } from '../components/atoms';
 import CardFood from '../components/card/CardFood';
 import CategoryBar from '../components/category/CategoryBar';
+import Notfound from '../components/notfound/Notfound';
 import { loginCtx } from '../context/LoginCtx';
 import { getSavedFoods } from '../Services/service';
 
@@ -40,7 +41,7 @@ const BookMark = () => {
               }
             })
           ) : (
-            <div> data kosong</div>
+            <Notfound />
           )}
         </Stack>
       </Col>

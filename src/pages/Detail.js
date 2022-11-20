@@ -24,16 +24,18 @@ const Detail = () => {
   }, []);
   const handleSave = () => {
     const foods = getSavedFoods();
-    const newfood = { ...fakeDetail, userid: user.id };
+    const newfood = { ...detail.food, userid: user.id };
     let newdata = [];
     if (foods === null) {
       newdata.push(newfood);
       postNewFood(newdata);
+      return navigate('/booked');
     }
+
     if (foods !== null) {
       let double = false;
       foods.map((food) => {
-        if (food.id === newfood.id && user.id === food.userid) {
+        if (food.id === newfood.id && food.userid === user.id) {
           double = true;
           return setOpen(true);
         }
@@ -43,8 +45,9 @@ const Detail = () => {
         newdata = [...foods, newfood];
 
         newdata.push(newfood);
-
         postNewFood(newdata);
+
+        return navigate('/booked');
       }
     }
   };
@@ -85,14 +88,7 @@ const Detail = () => {
                   }}></div>
               </div>
             </Stack>
-            {open && (
-              <Alert
-                variant="danger"
-                onClose={() => setOpen(false)}
-                dismissible>
-                Your food has been added
-              </Alert>
-            )}
+
             <Stack className="d-flex flex-row flex-wrap align-items-center p-md-5 gap-5">
               {detail.food.nutrition ? (
                 <Stack className="mt-5 gap-4">
@@ -140,6 +136,14 @@ const Detail = () => {
               )}
 
               <Stack className="d-flex justify-content-center align-items-center">
+                {open && (
+                  <Alert
+                    variant="danger"
+                    onClose={() => setOpen(false)}
+                    dismissible>
+                    Your food has been added
+                  </Alert>
+                )}
                 <TypoSubTitle content={'Health Score'} />
                 <div className="carbon-card">
                   <div className="carbon-circle">
