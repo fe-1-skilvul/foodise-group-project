@@ -27,6 +27,9 @@ const register = (data) => {
 const login = ({ email, password }) => {
   const res = getCurrentUser();
   let response = false;
+  if (res === null) {
+    return { response: false };
+  }
   res.map((user, i) => {
     if (user.email === email && user.password === password) {
       localStorage.setItem('ActiveUser', JSON.stringify(user));

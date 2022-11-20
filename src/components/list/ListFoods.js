@@ -7,6 +7,7 @@ import Detail from '../../pages/Detail';
 import { fakeData } from '../../Services/db';
 import Loading from '../atoms/loading';
 import CardFood from '../card/CardFood';
+import Notfound from '../notfound/Notfound';
 
 const ListFoods = () => {
   const data = fakeData;
@@ -40,7 +41,7 @@ const ListFoods = () => {
           })}
         </Stack>
       ) : (
-        <div>food kosong</div>
+        <Notfound />
       )}
     </>
   );

@@ -1,11 +1,5 @@
 import React, { useContext } from 'react';
-import {
-  Button,
-  Container,
-  Dropdown,
-  Form,
-  Navbar,
-} from 'react-bootstrap';
+import { Container, Dropdown, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { loginCtx } from '../../context/LoginCtx';
 import Icon from '../atoms/Icon';
@@ -13,7 +7,12 @@ import Search from '../search/Search';
 import './Navbar.css';
 
 const Appbar = () => {
-  const { setShow } = useContext(loginCtx);
+  const { setShow, isLogin, setIsLogin } = useContext(loginCtx);
+
+  const handleLogout = () => {
+    localStorage.removeItem('ActiveUser');
+    setIsLogin(false);
+  };
   return (
     <Navbar
       style={{
@@ -37,8 +36,15 @@ const Appbar = () => {
 
         <div className="container-nav">
           <div className="box-nav d-none d-md-flex">
-            <Icon image="/icons/bowl-food-solid.svg" alt="favorite" />
-            <Icon image="/icons/bell-solid.svg" alt="notif" />
+            <Link to={'/booked'}>
+              <Icon
+                image="/icons/bowl-food-solid.svg"
+                alt="favorite"
+              />
+            </Link>
+            <Link to={'#'}>
+              <Icon image="/icons/bell-solid.svg" alt="notif" />
+            </Link>
           </div>
           <Dropdown>
             <Dropdown.Toggle
@@ -50,21 +56,37 @@ const Appbar = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item>Foods</Dropdown.Item>
-              <Dropdown.Item>Favourite</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item onClick={(e) => setShow(true)}>
-                Log in
-              </Dropdown.Item>
-              <Link
-                to={'/signup'}
-                className="text-decoration-none text-success text-center "
-                style={{
-                  paddingLeft: '15px',
-                  fontWeight: 'bold',
-                }}>
-                Sign up
+              <Link to="/home" className="text-decoration-none">
+                <Dropdown.Item>Foods</Dropdown.Item>
               </Link>
+              <Link to="/booked" className="text-decoration-none">
+                <Dropdown.Item>Favorites</Dropdown.Item>
+              </Link>
+              <Dropdown.Divider />
+              {isLogin ? (
+                <Dropdown.Item
+                  link="#"
+                  onClick={(e) => handleLogout()}>
+                  Log out
+                </Dropdown.Item>
+              ) : (
+                <>
+                  <Dropdown.Item
+                    link="#"
+                    onClick={(e) => setShow(true)}>
+                    Log in
+                  </Dropdown.Item>
+                  <Link
+                    to={'/signup'}
+                    className="text-decoration-none text-success text-center "
+                    style={{
+                      paddingLeft: '15px',
+                      fontWeight: 'bold',
+                    }}>
+                    Sign up
+                  </Link>
+                </>
+              )}
             </Dropdown.Menu>
           </Dropdown>
         </div>

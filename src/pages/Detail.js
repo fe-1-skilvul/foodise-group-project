@@ -7,18 +7,16 @@ import Loading from '../components/atoms/loading';
 import Nutrition from '../components/nutrition/Nutrition';
 import { loginCtx } from '../context/LoginCtx';
 import { fetchDetail } from '../features/FetchAPI/detailSlice';
-import fakeDetail from '../Services/detail';
+
 import { getSavedFoods, postNewFood } from '../Services/service';
 
 const Detail = () => {
-  // const detail.food = fakeDetail;
   const { user } = useContext(loginCtx);
   const [open, setOpen] = useState(false);
   const detail = useSelector((state) => state.detail);
   const id = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(user);
   useEffect(() => {
     dispatch(fetchDetail(id));
   }, []);
@@ -33,22 +31,22 @@ const Detail = () => {
     }
 
     if (foods !== null) {
-      let double = false;
-      foods.map((food) => {
+      const mapfood = foods.filter((food) => {
         if (food.id === newfood.id && food.userid === user.id) {
-          double = true;
-          return setOpen(true);
+          return food;
         }
-        return double;
+        return null;
       });
-      if (double === false) {
+
+      if (mapfood.length === 0) {
         newdata = [...foods, newfood];
 
-        newdata.push(newfood);
         postNewFood(newdata);
 
         return navigate('/booked');
       }
+
+      return setOpen(true);
     }
   };
   return (
