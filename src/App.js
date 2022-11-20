@@ -47,7 +47,7 @@ function App() {
               }
             />
             <Route
-              path="/food/today"
+              path="/today"
               element={
                 <RequireAuth>
                   <BookMark />

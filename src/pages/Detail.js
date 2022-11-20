@@ -3,6 +3,7 @@ import { Alert, Button, Col, Row, Stack } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { TypoSubTitle } from '../components/atoms';
+import Loading from '../components/atoms/loading';
 import Nutrition from '../components/nutrition/Nutrition';
 import { loginCtx } from '../context/LoginCtx';
 import { fetchDetail } from '../features/FetchAPI/detailSlice';
@@ -45,12 +46,11 @@ const Detail = () => {
 
         postNewFood(newdata);
       }
-      console.log(double);
     }
   };
   return (
     <>
-      {detail.loading && <div>loading</div>}
+      {detail.loading && <Loading />}
       {!detail.loading && detail.food ? (
         <Row
           style={{

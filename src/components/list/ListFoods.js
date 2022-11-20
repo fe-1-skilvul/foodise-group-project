@@ -5,6 +5,7 @@ import { filterCtx } from '../../context/FilterCtx';
 import { fetchFoods } from '../../features/FetchAPI/dataSlice';
 import Detail from '../../pages/Detail';
 import { fakeData } from '../../Services/db';
+import Loading from '../atoms/loading';
 import CardFood from '../card/CardFood';
 
 const ListFoods = () => {
@@ -19,7 +20,7 @@ const ListFoods = () => {
   // console.log(foods);
   return (
     <>
-      {list.loading && <div>loading</div>}
+      {list.loading && <Loading />}
       {!list.loading && list.foods.length ? (
         <Stack
           className="p-3  flex-row flex-wrap justify-content-center gap-5"
