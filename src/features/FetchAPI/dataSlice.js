@@ -12,7 +12,9 @@ export const fetchFoods = createAsyncThunk(
   async ({ query, category }) => {
     return axios
       .get(
+
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=4da635c6a35347ce8cce85199806fd80&query=${query}&number=30&type=${category}&minProtein=10`
+
       )
       .then((res) => res.data.results);
   }
